@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8' />
+<title>ConsoleApp3.BenchParsers-20220815-132712</title>
+
+<style type="text/css">
+	table { border-collapse: collapse; display: block; width: 100%; overflow: auto; }
+	td, th { padding: 6px 13px; border: 1px solid #ddd; text-align: right; }
+	tr { background-color: #fff; border-top: 1px solid #ccc; }
+	tr:nth-child(even) { background: #f8f8f8; }
+</style>
+</head>
+<body>
+<pre><code>
+BenchmarkDotNet=v0.13.1, OS=Windows 10.0.19043.1889 (21H1/May2021Update)
+AMD Ryzen 5 3600, 1 CPU, 12 logical and 6 physical cores
+.NET SDK=6.0.301
+  [Host]     : .NET 6.0.6 (6.0.622.26707), X64 RyuJIT
+  DefaultJob : .NET 6.0.6 (6.0.622.26707), X64 RyuJIT
+</code></pre>
+<pre><code></code></pre>
+
+<table>
+<thead><tr><th>    Method</th><th>  Mean</th><th>Error</th><th>StdDev</th><th>Gen 0</th><th>Gen 1</th><th>Allocated</th>
+</tr>
+</thead><tbody><tr><td>Scriban</td><td>10.626 &mu;s</td><td>0.1771 &mu;s</td><td>0.1739 &mu;s</td><td>0.8087</td><td>0.0305</td><td>7 KB</td>
+</tr><tr><td>&#39;Scriban Liquid&#39;</td><td>11.181 &mu;s</td><td>0.1841 &mu;s</td><td>0.1632 &mu;s</td><td>0.9155</td><td>0.0305</td><td>8 KB</td>
+</tr><tr><td>DotLiquid</td><td>20.747 &mu;s</td><td>0.3219 &mu;s</td><td>0.2688 &mu;s</td><td>2.1057</td><td>0.0305</td><td>17 KB</td>
+</tr><tr><td>Stubble</td><td>11.396 &mu;s</td><td>0.1057 &mu;s</td><td>0.0988 &mu;s</td><td>1.3123</td><td>0.0153</td><td>11 KB</td>
+</tr><tr><td>Nustache</td><td>49.902 &mu;s</td><td>0.3584 &mu;s</td><td>0.2993 &mu;s</td><td>2.3193</td><td>-</td><td>20 KB</td>
+</tr><tr><td>Handlebars.NET</td><td>3,103.079 &mu;s</td><td>42.9313 &mu;s</td><td>38.0575 &mu;s</td><td>19.5313</td><td>7.8125</td><td>162 KB</td>
+</tr><tr><td>Cottle</td><td>11.251 &mu;s</td><td>0.1895 &mu;s</td><td>0.1773 &mu;s</td><td>1.7395</td><td>0.0458</td><td>14 KB</td>
+</tr><tr><td>Fluid</td><td>8.440 &mu;s</td><td>0.1178 &mu;s</td><td>0.1044 &mu;s</td><td>0.3204</td><td>-</td><td>3 KB</td>
+</tr></tbody></table>
+</body>
+</html>
